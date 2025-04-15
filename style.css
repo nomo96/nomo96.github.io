@@ -1,25 +1,29 @@
-/* 追加/変更 */
+/* 背景にグラデーションとアニメーション模様を追加 */
+body {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  font-family: "Arial", sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* グラデーションの動きを作る */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* コンテナの見やすさを保つため半透明に */
 .container {
-  /* もとのスタイルに加えてアニメ用の初期値を設定 */
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-.profile-img {
-  transition: transform 0.3s ease;
-}
-
-.profile-img:hover {
-  transform: scale(1.1);
-}
-
-/* 「もっと見る」スライド表示対応 */
-#more-info {
-  overflow: hidden;
-  max-height: 0px;
-  transition: max-height 0.5s ease;
-}
-
-#more-info.visible {
-  /* JavaScriptで高さを調整するのでここでは何もしない */
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  text-align: center;
+  backdrop-filter: blur(10px);
 }
