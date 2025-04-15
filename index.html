@@ -1,46 +1,29 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>私のホームページ</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>自己紹介ページ</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>こんにちは！私は <span id="name">野本寛太</span> です</h1>
-    <p>ようこそ、私の自己紹介ページへ！</p>
-  </header>
+  <div class="container">
+    <h1>こんにちは！私は <span id="name">田中 太郎</span> です。</h1>
+    <img src="profile.jpg" alt="プロフィール画像" class="profile-img" />
+    <p class="intro">
+      Web開発が大好きなエンジニアです。フロントエンドからバックエンドまで幅広くやってます！
+    </p>
 
-  <main>
-    <section>
-      <h2>プロフィール</h2>
-      <ul>
-        <li>出身地：埼玉</li>
-        <li>趣味：スポーツ観戦</li>
-        <li>好きな食べ物：魚介類</li>
-        <li></li>
-      </ul>
-    </section>
+    <button id="more-btn">もっと見る</button>
+    <div id="more-info" class="hidden">
+      <p>趣味は登山とカフェ巡り。最近はReactとNext.jsを勉強中です☕️</p>
+    </div>
 
-    <section>
-      <h2>私のリンク集</h2>
-      <ul>
-        <li><a href="https://github.com/your-username" target="_blank">GitHub</a></li>
-        <li><a href="mailto:your@email.com">メールで連絡</a></li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>今日のひとこと</h2>
-      <p id="message">JavaScriptでメッセージが変わります！</p>
-      <button onclick="changeMessage()">メッセージを変える</button>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Your Name</p>
-  </footer>
+    <div class="links">
+      <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
+      <a href="https://github.com/yourhandle" target="_blank">GitHub</a>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
